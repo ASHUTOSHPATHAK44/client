@@ -111,7 +111,7 @@ export const AdminPage = () => {
                         <p>Amount: {claim.amount}</p>
                         <p>Status: {claim.status}</p>
                         <div className="button-group">
-                            <button
+{/*                             <button
                                 onClick={() => handleApproveClaim(claim._id, claim.userId, claim.policyId, claim.amount)}
                                 style={{ backgroundColor: 'green' }}
                             >
@@ -122,7 +122,23 @@ export const AdminPage = () => {
                                 style={{ backgroundColor: 'red' }}
                             >
                                 Reject
-                            </button>
+                            </button> */}
+                            {claim.status === 'pending' && (
+                                <>
+                                <button
+                                    onClick={() => handleApproveClaim(claim._id, claim.userId, claim.policyId, claim.amount)}
+                                    style={{ backgroundColor: 'green' }}
+                                >
+                                    Approve
+                                </button>
+                                <button
+                                    onClick={() => handleRejectClaim(claim._id, claim.userId, claim.policyId, claim.amount)}
+                                    style={{ backgroundColor: 'red' }}
+                                >
+                                    Reject
+                                </button>
+                                </>
+                            )}
                         </div>
                     </div>
                 ))}
