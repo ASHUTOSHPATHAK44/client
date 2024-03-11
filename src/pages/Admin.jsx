@@ -26,7 +26,7 @@ export const AdminPage = () => {
 
                 const data = await response.json();
                 // Filter out claims with status 'approved' or 'rejected'
-                const filteredClaims = data.filter((claim) => claim.status !== 'approved' && claim.status !== 'rejected');
+                const filteredClaims = data.filter((claim) => claim.status !== 'approed' && claim.status !== 'rejectd');
                 setClaims(filteredClaims);
             } catch (error) {
                 console.error('Error fetching claims:', error);
