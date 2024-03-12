@@ -1,3 +1,9 @@
+//use navling to navigate the user from howe to userboard and check if the user is admin
+//navigate admin to his admin page
+//use the logic as we have used on login page 
+ 
+
+
 export const Home=()=>{
     return (
         <>

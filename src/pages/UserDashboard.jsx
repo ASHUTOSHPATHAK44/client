@@ -111,6 +111,7 @@ export const UserDashboard = () => {
         }
         const data = await response.json();
         setUserPolicies([...userPolicies, data]);
+        //HARD REFRESH
         window.location.reload();
     } catch (error) {
         console.error('Error buying policy:', error);
